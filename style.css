@@ -301,3 +301,51 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.four button::before,
+.four button::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    var(--rotate),
+    #ff00c1 0%,
+    #9600ff 25%,
+    #4900ff 50%,
+    #00b8ff 80%,
+    #00fff9 100%
+  );
+  width: 105%;
+  height: 110%;
+  left: -2.5%;
+  top: -5%;
+  border-radius: 10px;
+  transition: --rotate 9999s linear;
+}
+
+.four button:hover::before,
+.four button:hover::after {
+  --rotate: 3600deg;
+  transition: --rotate 20s linear;
+}
+
+.four button:hover::before {
+  animation: fade 1.2s;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 130deg;
+  inherits: false;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.4);
+  }
+}
