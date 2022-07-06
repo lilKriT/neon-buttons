@@ -283,6 +283,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 
 .four button {
@@ -298,6 +299,7 @@ body {
   text-decoration: none;
   font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   background: linear-gradient(-45deg, #ff00c1, #00fff9);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -320,6 +322,7 @@ body {
   top: -5%;
   border-radius: 10px;
   transition: --rotate 9999s linear;
+  z-index: -1;
 }
 
 .four button:hover::before,
