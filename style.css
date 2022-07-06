@@ -90,3 +90,34 @@ body {
   width: 20px;
   left: 80%;
 }
+
+.two {
+  background: #0e1538;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.two a {
+  position: relative;
+  width: 160px;
+  height: 60px;
+  display: inline-block;
+  background: #fff;
+  margin: 20px;
+}
+
+.two a::before,
+.two a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f00;
+  transition: 0.5s;
+}
+
+.two a span {
+
+}
