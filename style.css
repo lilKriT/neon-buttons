@@ -255,10 +255,23 @@ body {
   border-radius: 50%;
 }
 
-.three .outer span:nth-child(1) {
+.three .outer:hover span:nth-child(1) {
   filter: blur(7px);
 }
 
-.three .outer span:nth-child(2) {
+.three .outer:hover span:nth-child(2) {
   filter: blur(14px);
+}
+
+.three .outer:hover {
+  animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
