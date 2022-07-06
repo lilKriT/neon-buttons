@@ -12,7 +12,7 @@ body {
 
 .one {
   background: linear-gradient(#171717, #2c3232);
-  min-height: calc(100vh / 2);
+  min-height: calc(100vh / 3);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,7 +93,7 @@ body {
 
 .two {
   background: #0e1538;
-  min-height: calc(100vh / 2);
+  min-height: calc(100vh / 3);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,4 +177,42 @@ body {
   height: 100%;
   background: rgba(255 255 255 / 0.075);
   transform: skew(25deg);
+}
+
+.three {
+  background: linear-gradient(#222, #666);
+  min-height: calc(100vh / 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+}
+
+.three .outer {
+  /* margin: 0 50px; */
+  position: relative;
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.three .btn {
+  height: 70px;
+  width: 220px;
+  border-radius: 50px;
+}
+
+.three .circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.three .outer .btn,
+.three .outer span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
