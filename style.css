@@ -118,13 +118,37 @@ body {
   transition: 0.5s;
 }
 
+.two a:nth-child(1):before,
+.two a:nth-child(1):after {
+  background: linear-gradient(
+    45deg,
+    #00ccff,
+    transparent,
+    transparent,
+    #d400d4
+  );
+}
+
+.two a:nth-child(2):before,
+.two a:nth-child(2):after {
+  background: linear-gradient(
+    45deg,
+    #ff075b,
+    transparent,
+    transparent,
+    #1aff22
+  );
+}
+
 .two a:hover:before {
   inset: -3px;
+  transition: 0.5s;
 }
 
 .two a:hover:after {
   inset: -3px;
   filter: blur(10px);
+  transition: 0.5s;
 }
 
 .two a span {
@@ -140,4 +164,17 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #fff;
+  border: 1px solid #040a29;
+  overflow: hidden;
+}
+
+.two a span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255 255 255 / 0.075);
+  transform: skew(25deg);
 }
