@@ -12,7 +12,7 @@ body {
 
 .one {
   background: linear-gradient(#171717, #2c3232);
-  min-height: 100vh;
+  min-height: calc(100vh / 2);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,7 +93,7 @@ body {
 
 .two {
   background: #0e1538;
-  min-height: 100vh;
+  min-height: calc(100vh / 2);
   display: flex;
   justify-content: center;
   align-items: center;
