@@ -16,8 +16,77 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 60px;
 }
 
-a {
-    
+.one a {
+  position: relative;
+  background: #444;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  padding: 10px 30px;
+  transition: all 0.3s;
+}
+
+.one a:hover {
+  letter-spacing: 0.25rem;
+  background-color: var(--clr);
+  color: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
+}
+
+.one a::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #27282c;
+}
+
+.one a span {
+  position: relative;
+  z-index: 1;
+}
+.one a i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.one a i::before {
+  content: "";
+  position: absolute;
+  border: 2px solid var(--clr);
+  top: -3.5px;
+  left: 80%;
+  width: 10px;
+  height: 5px;
+  background: #27282c;
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+
+.one a:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+
+.one a i::after {
+  content: "";
+  position: absolute;
+  border: 2px solid var(--clr);
+  bottom: -3.5px;
+  left: 20%;
+  width: 10px;
+  height: 5px;
+  background: #27282c;
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+
+.one a:hover i::after {
+  width: 20px;
+  left: 80%;
 }
