@@ -109,8 +109,8 @@ body {
   margin: 20px;
 }
 
-.two a::before,
-.two a::after {
+.two a:before,
+.two a:after {
   content: "";
   position: absolute;
   inset: 0;
@@ -118,6 +118,26 @@ body {
   transition: 0.5s;
 }
 
-.two a span {
+.two a:hover:before {
+  inset: -3px;
+}
 
+.two a:hover:after {
+  inset: -3px;
+  filter: blur(10px);
+}
+
+.two a span {
+  position: absolute;
+  inset: 0;
+  display: inline-block;
+  background: #0e1538;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
 }
